@@ -1,7 +1,7 @@
 {
   "name": "turbotraffic-app",
   "vendor": "estrategiamicpartnerco",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "title": "Turbotraffic app",
   "description": "Indexation app for turbotraffic",
   "mustUpdateAt": "2018-01-04",
@@ -34,7 +34,7 @@
   "billingOptions": {
     "type": "free",
     "support": {
-      "email": "agonzalez@turbotraffic.com",
+      "email": "development@turbotraffic.com",
       "url": "https://github.com/turbotraffic1/vtex-service/issues"
     },
     "availableCountries": ["*"]
