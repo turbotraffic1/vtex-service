@@ -10,3 +10,8 @@
 
 - Redirigir correctamente a la página cuando el servicio falla o la palabra clave no es válida
 - Se agrega documentación y billing options
+
+## [2.0.1] - 2023-05-12
+### minor
+
+- Se adapta el readme para vtex
