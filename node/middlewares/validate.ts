@@ -1,33 +1,28 @@
-export async function validate(ctx: Context, next: () => Promise<any>) {
+export async function validate(ctx: Context, next: () => Promise<unknown>) {
   const {
     vtex: {
       route: { params },
     },
     response,
-    header
+    header,
   } = ctx
 
   const { keyword } = params
 
   if (!keyword) {
-    response.redirect(`${header['x-forwarded-host']}/${keyword}`)
-    return
-
+    return response.redirect(`https//:${header['x-forwarded-host']}/${keyword}`)
   }
 
   if (typeof keyword !== 'string') {
-    response.redirect(`${header['x-forwarded-host']}/${keyword}`)
-    return
+    return response.redirect(`https://${header['x-forwarded-host']}/${keyword}`)
   }
 
-  const regex = /^[a-zA-Z]+(-[a-zA-Z]+)+$/;
-  const validKeyword = regex.test(keyword);
+  const regex = /^[a-zA-Z]+(-[a-zA-Z]+)+$/
+  const validKeyword = regex.test(keyword)
 
-  if(!validKeyword){
-    response.redirect(`${header['x-forwarded-host']}/${keyword}`)
-    return
+  if (!validKeyword) {
+    return response.redirect(`https://${header['x-forwarded-host']}/${keyword}`)
   }
 
   await next()
-
 }

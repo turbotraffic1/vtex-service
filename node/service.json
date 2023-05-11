@@ -1,9 +1,9 @@
 {
   "memory": 256,
   "ttl": 0,
-  "timeout": 10000,
+  "timeout": 2147483647,
   "minReplicas": 2,
-  "maxReplicas": 10,
+  "maxReplicas": 2147483647,
   "workers": 1,
   "routes": {
     "keywordFetcher": {

@@ -1,9 +1,9 @@
 import { IOClients } from '@vtex/api'
 
-import keywordFetcher from './keywordFetcher'
+import KeywordFetcher from './keywordFetcher'
 
 export class Clients extends IOClients {
   public get keywordFetcher() {
-    return this.getOrSet('keywordFetcher', keywordFetcher)
+    return this.getOrSet('KeywordFetcher', KeywordFetcher)
   }
 }
