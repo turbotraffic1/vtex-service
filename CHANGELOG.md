@@ -5,7 +5,8 @@
 
 - Inicialización del servicio
 
-## [1.1.0] - 2023-05-12
+## [2.0.0] - 2023-05-12
 ### patch
 
 - Redirigir correctamente a la página cuando el servicio falla o la palabra clave no es válida
+- Se agrega documentación y billing options
