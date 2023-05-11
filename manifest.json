@@ -12,7 +12,7 @@
     "docs": "0.x"
   },
   "scripts": {
-    "prereleasy": "vtex publish --verbose"
+    "prereleasy": "bash lint.sh"
   },
   "credentialType": "absolute",
   "policies": [
