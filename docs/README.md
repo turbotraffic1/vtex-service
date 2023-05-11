@@ -1,17 +1,17 @@
 # TurboTraffic Service - VTEX
 
-## Descripción del proyecto :page_facing_up:
+## Descripción del proyecto
 Servicio en node para la conexión e indexación de turbotraffic desarrollado para tiendas VTEX
 
 <br/>
 
-## Requerimientos :memo:
+## Requerimientos
 - Tener acceso al ambiente **master** de tu página.
 - Validar que tengas tus keywords publicadas.
 
 <br/>
 
-## Instalación :house_with_garden:
+## Instalación
 Debes crear un ambiente de producción
 ```
 vtex use {workspaceName} --production
@@ -33,12 +33,12 @@ vtex use master && vtex install estrategiamicpartnerco.turbotraffic-app
 ```
 <br/>
 
-## Ejecución :zap:
+## Ejecución
 Si la instalación fue exitosa puedes validar en tu sitio web público que el template funcione correctamente
 ```
 https://tupagina.com/t/tu-keyword
 ```
 <br/>
 
-## Autor :copyright:
-Alejandro González Serna - alejo.1996.2001@gmail.com
+## Autor
+Alejandro González Serna - agonzalez@turbotraffic.com
