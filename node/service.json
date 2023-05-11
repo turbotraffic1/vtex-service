@@ -1,0 +1,14 @@
+{
+  "memory": 256,
+  "ttl": 0,
+  "timeout": 10000,
+  "minReplicas": 2,
+  "maxReplicas": 10,
+  "workers": 1,
+  "routes": {
+    "keywordFetcher": {
+      "path": "/t/:keyword",
+      "public": true
+    }
+  }
+}
