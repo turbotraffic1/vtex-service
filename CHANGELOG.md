@@ -20,3 +20,8 @@
 ### minor
 
 - Se actualiza el correo de contacto
+
+## [3.0.0] - 2023-06-20
+### major
+
+- Se actualiza el consumo a la nueva version de Turbotraffic API
