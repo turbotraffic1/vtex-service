@@ -3,6 +3,7 @@ import { ExternalClient } from '@vtex/api'
 
 interface GetHtml {
   data: string
+  errorRedirectUrl: string
 }
 export default class KeywordFetcher extends ExternalClient {
   constructor(context: IOContext, options?: InstanceOptions) {
@@ -11,7 +12,7 @@ export default class KeywordFetcher extends ExternalClient {
 
   public async getHtml(keyword: string): Promise<GetHtml> {
     const get = await this.http.get(
-      `find-link?keyword=${keyword}&brand=${this.context.account}`,
+      `consult/html?keyword=${keyword}&brand=${this.context.account}`,
       {
         metric: 'keyword-get',
       }

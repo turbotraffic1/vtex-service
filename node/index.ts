@@ -1,11 +1,16 @@
-import type { ClientsConfig, ServiceContext, RecorderState } from '@vtex/api'
+import type {
+  ClientsConfig,
+  ServiceContext,
+  RecorderState,
+  Cached,
+} from '@vtex/api'
 import { LRUCache, method, Service } from '@vtex/api'
 
 import { Clients } from './clients'
 import { validate, getter } from './middlewares'
 
 const TIMEOUT_MS = 800
-const memoryCache = new LRUCache<string, any>({ max: 1 })
+const memoryCache = new LRUCache<string, Cached>({ max: 1 })
 
 metrics.trackCache('keywordFetcher', memoryCache)
 
