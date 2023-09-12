@@ -30,3 +30,8 @@
 ### minor
 
 - Se modifica el manifest para tener un ttl largo
+
+## [3.0.2] - 2023-09-12
+### minor
+
+- Se modifica memory y valores del servicio
