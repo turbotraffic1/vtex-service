@@ -25,3 +25,8 @@
 ### major
 
 - Se actualiza el consumo a la nueva version de Turbotraffic API
+
+## [3.0.1] - 2023-09-12
+### minor
+
+- Se modifica el manifest para tener un ttl largo
