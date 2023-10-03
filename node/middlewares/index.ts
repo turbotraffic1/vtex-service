@@ -1,2 +1,4 @@
-export * from './getter'
-export * from './validate'
+export * from './keywordGetter'
+export * from './keywordValidate'
+export * from './xmlGetter'
+export * from './xmlValidate'

@@ -1,4 +1,7 @@
-export async function validate(ctx: Context, next: () => Promise<unknown>) {
+export async function keywordValidate(
+  ctx: Context,
+  next: () => Promise<unknown>
+) {
   const {
     vtex: {
       route: { params },
@@ -17,7 +20,7 @@ export async function validate(ctx: Context, next: () => Promise<unknown>) {
     return response.redirect(`https://${header['x-forwarded-host']}`)
   }
 
-  const regex = /^[a-zA-Z]+(-[a-zA-Z]+)+$/
+  const regex = /^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*$/
   const validKeyword = regex.test(keyword)
 
   if (!validKeyword) {

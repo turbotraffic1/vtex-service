@@ -1,4 +1,7 @@
-export async function getter(ctx: Context, next: () => Promise<unknown>) {
+export async function keywordGetter(
+  ctx: Context,
+  next: () => Promise<unknown>
+) {
   const {
     vtex: {
       route: { params },
@@ -9,6 +12,7 @@ export async function getter(ctx: Context, next: () => Promise<unknown>) {
   } = ctx
 
   const { keyword } = params
+
   let redirectTo = null
 
   if (typeof keyword === 'string') {

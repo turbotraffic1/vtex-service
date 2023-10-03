@@ -7,12 +7,18 @@ import type {
 import { LRUCache, method, Service } from '@vtex/api'
 
 import { Clients } from './clients'
-import { validate, getter } from './middlewares'
+import {
+  keywordValidate,
+  keywordGetter,
+  xmlGetter,
+  xmlValidate,
+} from './middlewares'
 
 const TIMEOUT_MS = 80000
 const memoryCache = new LRUCache<string, Cached>({ max: 50 })
 
 metrics.trackCache('keywordFetcher', memoryCache)
+metrics.trackCache('xmlFetcher', memoryCache)
 
 const clients: ClientsConfig<Clients> = {
   implementation: Clients,
@@ -37,7 +43,10 @@ export default new Service({
   clients,
   routes: {
     keywordFetcher: method({
-      GET: [validate, getter],
+      GET: [keywordValidate, keywordGetter],
+    }),
+    xmlFetcher: method({
+      GET: [xmlValidate, xmlGetter],
     }),
   },
 })

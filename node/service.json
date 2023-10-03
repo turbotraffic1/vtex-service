@@ -1,13 +1,17 @@
 {
   "memory": 512,
-  "ttl": 60,
+  "ttl": 900000,
   "timeout": 900000,
-  "minReplicas": 5,
+  "minReplicas": 10,
   "maxReplicas": 50,
   "workers": 4,
   "routes": {
     "keywordFetcher": {
       "path": "/t/:keyword",
+      "public": true
+    },
+    "xmlFetcher": {
+      "path": "/t/xmls/:index",
       "public": true
     }
   }
