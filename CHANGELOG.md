@@ -24,7 +24,7 @@
 ## [3.0.0] - 2023-06-20
 ### major
 
-- Se actualiza el consumo a la nueva version de Turbotraffic API
+- Se actualiza el consumo a la nueva versión de Turbotraffic API
 
 ## [3.0.1] - 2023-09-12
 ### patch
@@ -42,3 +42,8 @@
 - Se modifica memory y valores del servicio
 - Se agrega consulta de xml con ruta aparte
 - Se mejora el validador de ruta para las keywords
+
+## [4.0.1] - 2023-10-03
+### patch
+
+- Se agrega documentación sobre la ruta XML

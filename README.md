@@ -24,19 +24,26 @@ Verifica que funcione
 ```
 https://{workspaceName}--{vendor}.myvtex.com/t/{keyword}
 ```
-
+```
+https://{workspaceName}--{vendor}.myvtex.com/t/xmls/1
+```
 **¿Todo en orden?**
 <br/>
-Instalalo en el workspace **master**
+Instálalo en el workspace **master**
 ```
 vtex use master && vtex install estrategiamicpartnerco.turbotraffic-app
 ```
 <br/>
 
 ## Ejecución :zap:
-Si la instalación fue exitosa puedes validar en tu sitio web público que el template funcione correctamente
+Si la instalación fue exitosa puedes validar en tu sitio web público
 ```
 https://tupagina.com/t/tu-keyword
+```
+
+También verifica el XML generado
+```
+https://tupagina.com/t/xmls/1
 ```
 <br/>
 
