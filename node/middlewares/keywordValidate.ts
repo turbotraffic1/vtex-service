@@ -11,6 +11,8 @@ export async function keywordValidate(
   } = ctx
 
   const { keyword } = params
+  const cleanKeyword = query.keyword.replace(/-/g, ' ')
+  const keywordEncoded = encodeURIComponent(cleanKeyword)
 
   if (!keyword) {
     return response.redirect(`https//:${header['x-forwarded-host']}`)

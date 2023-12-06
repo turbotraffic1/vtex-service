@@ -4,6 +4,7 @@ import { ExternalClient } from '@vtex/api'
 interface GetHtml {
   data: string
   errorRedirectUrl: string
+  success: boolean
 }
 export default class KeywordFetcher extends ExternalClient {
   constructor(context: IOContext, options?: InstanceOptions) {

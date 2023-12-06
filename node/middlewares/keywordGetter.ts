@@ -13,26 +13,23 @@ export async function keywordGetter(
 
   const { keyword } = params
 
-  let redirectTo = null
-
   if (typeof keyword === 'string') {
     try {
-      const { data, errorRedirectUrl } = await fetch.getHtml(keyword)
+      const { data, errorRedirectUrl, success } = await fetch.getHtml(keyword)
 
-      redirectTo = errorRedirectUrl
-      ctx.body = data
-      response.set(
-        'Cache-Control',
-        'private, no-store, max-age=0, must-revalidate'
-      )
-      response.set('Pragma', 'no-cache')
-      response.set('Expires', '0')
-    } catch (error) {
-      if (redirectTo) {
-        response.redirect(redirectTo)
+      if (!success) {
+        response.redirect(errorRedirectUrl)
       } else {
-        response.redirect(`https://${header['x-forwarded-host']}`)
+        ctx.body = data
+        response.set(
+          'Cache-Control',
+          'private, no-store, max-age=0, must-revalidate'
+        )
+        response.set('Pragma', 'no-cache')
+        response.set('Expires', '0')
       }
+    } catch (error) {
+      response.redirect(`https://${header['x-forwarded-host']}`)
     }
   }
 
