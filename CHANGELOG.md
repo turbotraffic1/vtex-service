@@ -62,3 +62,9 @@
 ### minor
 
 - Se agrega funcionalidad de redirección por consulta a la página original
+
+## [5.0.0] - 2024-01-29
+
+### major
+
+- Se agrega endpoint de version

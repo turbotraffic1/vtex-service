@@ -12,6 +12,7 @@ import {
   keywordGetter,
   xmlGetter,
   xmlValidate,
+  versionGetter,
 } from './middlewares'
 
 const TIMEOUT_MS = 80000
@@ -42,6 +43,9 @@ declare global {
 export default new Service({
   clients,
   routes: {
+    versionFetcher: method({
+      GET: [versionGetter],
+    }),
     keywordFetcher: method({
       GET: [keywordValidate, keywordGetter],
     }),

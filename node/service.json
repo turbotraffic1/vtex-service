@@ -6,6 +6,10 @@
   "maxReplicas": 50,
   "workers": 4,
   "routes": {
+    "versionFetcher": {
+      "path": "/t/version",
+      "public": true
+    },
     "keywordFetcher": {
       "path": "/t/:keyword",
       "public": true
