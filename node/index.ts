@@ -13,6 +13,7 @@ import {
   xmlGetter,
   xmlValidate,
   versionGetter,
+  sitemapGetter,
 } from './middlewares'
 
 const TIMEOUT_MS = 80000
@@ -20,6 +21,7 @@ const memoryCache = new LRUCache<string, Cached>({ max: 50 })
 
 metrics.trackCache('keywordFetcher', memoryCache)
 metrics.trackCache('xmlFetcher', memoryCache)
+metrics.trackCache('sitemapFetcher', memoryCache)
 
 const clients: ClientsConfig<Clients> = {
   implementation: Clients,
@@ -48,6 +50,9 @@ export default new Service({
     }),
     keywordFetcher: method({
       GET: [keywordValidate, keywordGetter],
+    }),
+    sitemapFetcher: method({
+      GET: [sitemapGetter],
     }),
     xmlFetcher: method({
       GET: [xmlValidate, xmlGetter],

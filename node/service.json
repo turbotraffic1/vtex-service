@@ -17,6 +17,10 @@
     "xmlFetcher": {
       "path": "/t/xmls/:index",
       "public": true
+    },
+    "sitemapFetcher": {
+      "path": "/t/sitemap",
+      "public": true
     }
   }
 }

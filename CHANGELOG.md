@@ -68,3 +68,9 @@
 ### major
 
 - Se agrega endpoint de version
+
+## [6.0.0] - 2024-04-25
+
+### major
+
+- Se agrega endpoint de sitemap
