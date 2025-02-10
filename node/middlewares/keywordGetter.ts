@@ -19,6 +19,7 @@ export async function keywordGetter(
 
       if (!success) {
         response.redirect(errorRedirectUrl)
+        response.set('Status', '301')
       } else {
         ctx.body = data
         response.set(

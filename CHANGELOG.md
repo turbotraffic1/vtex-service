@@ -74,3 +74,9 @@
 ### major
 
 - Se agrega endpoint de sitemap
+
+## [6.1.0] - 2025-02-10
+
+### patch
+
+- Se asigna status 301 a las paginas eliminadas
