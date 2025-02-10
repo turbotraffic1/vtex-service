@@ -18,8 +18,9 @@ export async function keywordGetter(
       const { data, errorRedirectUrl, success } = await fetch.getHtml(keyword)
 
       if (!success) {
-        response.redirect(errorRedirectUrl)
-        response.set('Status', '301')
+        response.status = 301
+        response.set('Location', errorRedirectUrl)
+        ctx.body = ''
       } else {
         ctx.body = data
         response.set(
@@ -30,7 +31,11 @@ export async function keywordGetter(
         response.set('Expires', '0')
       }
     } catch (error) {
-      response.redirect(`https://${header['x-forwarded-host']}`)
+      response.status = 301
+      response.set('Location', `https://${header['x-forwarded-host']}`)
+      ctx.body = ''
+
+      return
     }
   }
 

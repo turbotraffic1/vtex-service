@@ -22,10 +22,14 @@ export async function xmlGetter(ctx: Context, next: () => Promise<unknown>) {
         Expires: '0',
       })
     } else {
-      response.redirect(`https://${header['x-forwarded-host']}`)
+      response.status = 301
+      response.set('Location', `https://${header['x-forwarded-host']}`)
+      ctx.body = ''
     }
   } catch (error) {
-    response.redirect(`https://${header['x-forwarded-host']}`)
+    response.status = 301
+    response.set('Location', `https://${header['x-forwarded-host']}`)
+    ctx.body = ''
   }
 
   await next()

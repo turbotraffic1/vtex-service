@@ -10,7 +10,11 @@ export async function xmlValidate(ctx: Context, next: () => Promise<unknown>) {
   const { index } = params
 
   if (!index || !Number(index)) {
-    return response.redirect(`https://${header['x-forwarded-host']}`)
+    response.status = 301
+    response.set('Location', `https://${header['x-forwarded-host']}`)
+    ctx.body = ''
+
+    return
   }
 
   await next()

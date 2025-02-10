@@ -80,3 +80,9 @@
 ### patch
 
 - Se asigna status 301 a las paginas eliminadas
+
+## [6.1.1] - 2025-02-10
+
+### patch
+
+- Se asigna status 301 a todas las rutas y fallas posibles

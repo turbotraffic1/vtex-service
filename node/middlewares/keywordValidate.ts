@@ -13,18 +13,30 @@ export async function keywordValidate(
   const { keyword } = params
 
   if (!keyword) {
-    return response.redirect(`https//:${header['x-forwarded-host']}`)
+    response.status = 301
+    response.set('Location', `https://${header['x-forwarded-host']}`)
+    ctx.body = ''
+
+    return
   }
 
   if (typeof keyword !== 'string') {
-    return response.redirect(`https://${header['x-forwarded-host']}`)
+    response.status = 301
+    response.set('Location', `https://${header['x-forwarded-host']}`)
+    ctx.body = ''
+
+    return
   }
 
   const regex = /^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*$/
   const validKeyword = regex.test(keyword)
 
   if (!validKeyword) {
-    return response.redirect(`https://${header['x-forwarded-host']}`)
+    response.status = 301
+    response.set('Location', `https://${header['x-forwarded-host']}`)
+    ctx.body = ''
+
+    return
   }
 
   await next()
