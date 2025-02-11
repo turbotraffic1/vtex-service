@@ -15,12 +15,19 @@ export async function keywordGetter(
 
   if (typeof keyword === 'string') {
     try {
-      const { data, errorRedirectUrl, success } = await fetch.getHtml(keyword)
+      const { data, errorRedirectUrl, success, isTemporal } =
+        await fetch.getHtml(keyword)
 
       if (!success) {
-        response.status = 301
-        response.set('Location', errorRedirectUrl)
-        ctx.body = ''
+        if (isTemporal) {
+          response.status = 302
+          response.set('Location', errorRedirectUrl)
+          ctx.body = ''
+        } else {
+          response.status = 301
+          response.set('Location', errorRedirectUrl)
+          ctx.body = ''
+        }
       } else {
         ctx.body = data
         response.set(

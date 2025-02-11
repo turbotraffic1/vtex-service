@@ -5,6 +5,7 @@ interface GetHtml {
   data: string
   errorRedirectUrl: string
   success: boolean
+  isTemporal: boolean
 }
 export default class KeywordFetcher extends ExternalClient {
   constructor(context: IOContext, options?: InstanceOptions) {

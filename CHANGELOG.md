@@ -86,3 +86,9 @@
 ### patch
 
 - Se asigna status 301 a todas las rutas y fallas posibles
+
+## [6.2.0] - 2025-02-11
+
+### patch
+
+- Se actualiza la asignación de status 302 a productos no disponibles
