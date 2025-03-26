@@ -12,7 +12,7 @@ export async function keywordValidate(
 
   const { keyword } = params
 
-  if (!keyword) {
+  if (!keyword || keyword === 's') {
     response.status = 301
     response.set('Location', `https://${header['x-forwarded-host']}`)
     ctx.body = ''

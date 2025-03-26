@@ -92,3 +92,9 @@
 ### patch
 
 - Se actualiza la asignación de status 302 a productos no disponibles
+
+## [6.3.0] - 2025-03-26
+
+### patch
+
+- Se hace redireccion cuando solo se tenga /t/ sin query param
