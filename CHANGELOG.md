@@ -98,3 +98,15 @@
 ### patch
 
 - Se hace redireccion cuando solo se tenga /t/ sin query param
+
+## [6.4.0] - 2025-05-09
+
+### patch
+
+- Se actualiza el readme
+
+## [6.4.1] - 2025-05-09
+
+### patch
+
+- Se actualiza el readme
