@@ -110,3 +110,9 @@
 ### patch
 
 - Se actualiza el readme
+
+## [6.5.0] - 2025-05-28
+
+### mayor
+
+- Se saca la version base
